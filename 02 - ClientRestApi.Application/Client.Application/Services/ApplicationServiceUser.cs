@@ -19,15 +19,15 @@ namespace Client.Application.Services
             _serviceUser = ServiceUser;
         }
 
-        public async Task<bool> Add(UserDTO obj)
+        public async Task Add(UserDTO obj)
         {
             // var entity = _mapperUser.MapperToEntity(obj);
-            return await _serviceUser.Add(new User());
+            await _serviceUser.Add(new User());
         }
 
-        public async Task<bool> Deactivate(string id)
+        public async Task Deactivate(string id)
         {
-            return await _serviceUser.Deactivate(Guid.Parse(id));
+            await _serviceUser.Deactivate(Guid.Parse(id));
         }
 
         public async Task<IEnumerable<UserDTO>> GetAll()
@@ -44,10 +44,10 @@ namespace Client.Application.Services
             return null;
         }
 
-        public async Task<bool> Update(UserDTO obj)
+        public async Task Update(UserDTO obj)
         {
             // var entity = _mapperUser.MapperToEntity(obj);
-            return await _serviceUser.Update(new User());
+            await _serviceUser.Update(new User());
         }
     }
 }

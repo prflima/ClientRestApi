@@ -8,14 +8,14 @@ namespace Client.Application.Interfaces
 {
     public interface IApplicationServiceUser
     {
-        Task<bool> Add(UserDTO obj);
+        Task Add(UserDTO obj);
 
         Task<UserDTO> GetById(string id);
 
         Task<IEnumerable<UserDTO>> GetAll();
 
-        Task<bool> Update(UserDTO obj);
+        Task Update(UserDTO obj);
 
-        Task<bool> Deactivate(string id);
+        Task Deactivate(string id);
     }
 }

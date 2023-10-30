@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "uRuoodCOH/be4tLSjZmLlFiTu+HyEhn6Jp5JnU/zccsdBYHu8emkRSpz2YAR9cdSWg3J+8CmGTdNT4+VNzNO0A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\paulo\\OneDrive\\Desktop\\Git\\ClientRestApi\\04 - ClientRestApi.Infrastructure\\CrossCutting\\Client.Infrastructure.CrossCutting.IOC\\Client.Infrastructure.CrossCutting.IOC.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\paulo\\.nuget\\packages\\autofac\\4.9.4\\autofac.4.9.4.nupkg.sha512",
+    "C:\\Users\\paulo\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\paulo\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

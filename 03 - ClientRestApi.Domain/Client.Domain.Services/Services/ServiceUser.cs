@@ -11,15 +11,19 @@ namespace Client.Domain.Services.Services
     public class ServiceUser : ServiceBase<User>, IServiceUser
     {
         private readonly IRepositoryUser _repositoryUser;
-        public ServiceUser(IRepositoryUser RepositoryUser) 
+        public ServiceUser(IRepositoryUser RepositoryUser)
             : base(RepositoryUser)
         {
             _repositoryUser = RepositoryUser;
         }
 
-        public async Task<bool> VerifyUserExists(string cpf)
+        public async Task<bool> VerifyUserExists(string document)
         {
-           return await _repositoryUser.VerifyUserExists(cpf);
+            var user = await _repositoryUser.GetByDocument(document);
+            if (user != null)
+                return true;
+            else
+                return false;
         }
     }
 }

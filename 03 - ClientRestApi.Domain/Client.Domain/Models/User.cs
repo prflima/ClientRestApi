@@ -11,7 +11,12 @@ namespace Client.Domain.Models
         /// <summary>
         /// The first name of user.
         /// </summary>
-        public string Full { get; set; }
+        public string FirstName { get; set; }
+
+        /// <summary>
+        /// The last name of user.
+        /// </summary>
+        public string LastName { get; set; }
 
         /// <summary>
         /// The document RG of user.

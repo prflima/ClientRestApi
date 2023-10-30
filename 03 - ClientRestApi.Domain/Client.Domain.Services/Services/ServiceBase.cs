@@ -16,14 +16,14 @@ namespace Client.Domain.Services.Services
             _repository = Repository;
         }
 
-        public virtual async Task<bool> Add(TEntity entity)
+        public virtual async Task Add(TEntity entity)
         {
-            return await _repository.Add(entity);
+            await _repository.Add(entity);
         }
 
-        public virtual async Task<bool> Deactivate(Guid id)
+        public virtual async Task Deactivate(Guid id)
         {
-            return await _repository.Deactivate(id);
+            // await _repository.Update(id);
         }
 
         public virtual async Task<IEnumerable<TEntity>> GetAll()
@@ -36,9 +36,9 @@ namespace Client.Domain.Services.Services
             return await _repository.GetById(id);
         }
 
-        public virtual async Task<bool> Update(TEntity entity)
+        public virtual async Task Update(TEntity entity)
         {
-            return await _repository.Update(entity);
+            await _repository.Update(entity);
         }
     }
 }
