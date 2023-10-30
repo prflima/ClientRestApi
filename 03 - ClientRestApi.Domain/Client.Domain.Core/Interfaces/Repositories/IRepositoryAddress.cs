@@ -6,8 +6,8 @@ using Client.Domain.Models;
 
 namespace Client.Domain.Core.Interfaces.Repositories
 {
-    public interface IRepositoryUser : IRepository<User>
+    public interface IRepositoryAddress : IRepository<Address>
     {
-        Task<User> GetByDocument(string cpf);
+        
     }
 }

@@ -9,8 +9,7 @@ namespace Client.Domain.Core.Interfaces.Repositories
     {
         Task<IEnumerable<TEntity>> GetAll();
         Task<TEntity> GetById(Guid id);
-        Task<bool> Add(TEntity entity);
-        Task<bool> Deactivate(Guid id);
-        Task<bool> Update(TEntity entity);
+        Task Add(TEntity entity);
+        Task Update(TEntity entity);
     }
 }

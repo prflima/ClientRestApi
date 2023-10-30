@@ -40,5 +40,10 @@ namespace Client.Domain.Models
         /// The state.
         /// </summary>
         public string State { get; set; }
+
+        /// <summary>
+        /// The user of address.
+        /// </summary>
+        public User User { get; set; }
     }
 }
