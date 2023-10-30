@@ -17,6 +17,11 @@ namespace Client.Domain.Services.Services
             _repositoryUser = RepositoryUser;
         }
 
+        public override async Task Add(User user)
+        {
+            
+        }
+
         public async Task<bool> VerifyUserExists(string document)
         {
             var user = await _repositoryUser.GetByDocument(document);

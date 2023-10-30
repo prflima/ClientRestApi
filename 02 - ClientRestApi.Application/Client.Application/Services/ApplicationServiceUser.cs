@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Client.Application.DTOs;
 using Client.Application.Interfaces;
+using Client.Application.Interfaces.Map;
 using Client.Domain.Core.Interfaces.Services;
 using Client.Domain.Models;
 
@@ -12,7 +13,7 @@ namespace Client.Application.Services
     public class ApplicationServiceUser : IApplicationServiceUser
     {
         private readonly IServiceUser _serviceUser;
-        // private readonly IMapperUser _mapperUser;
+        private readonly IUserMapper _mapperUser;
 
         public ApplicationServiceUser(IServiceUser ServiceUser)
         {
@@ -21,7 +22,7 @@ namespace Client.Application.Services
 
         public async Task Add(UserDTO obj)
         {
-            // var entity = _mapperUser.MapperToEntity(obj);
+            var entity = _mapperUser.MapperToEntity(obj);
             await _serviceUser.Add(new User());
         }
 

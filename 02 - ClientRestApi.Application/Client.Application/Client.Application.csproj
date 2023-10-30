@@ -4,6 +4,7 @@
     <ProjectReference Include="..\..\03 - ClientRestApi.Domain\Client.Domain.Core\Client.Domain.Core.csproj" />
     <ProjectReference Include="..\Client.Application.DTO\Client.Application.DTO.csproj" />
     <ProjectReference Include="..\..\03 - ClientRestApi.Domain\Client.Domain\Client.Domain.csproj" />
+    <ProjectReference Include="..\..\04 - ClientRestApi.Infrastructure\CrossCutting\Client.Infrastructure.CrossCutting.Adapter\Client.Infrastructure.CrossCutting.Adapter.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

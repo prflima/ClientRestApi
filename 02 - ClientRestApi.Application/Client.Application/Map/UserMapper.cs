@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Client.Application.DTOs;
+using Client.Application.Interfaces.Map;
 using Client.Domain.Models;
-using Client.Infrastructure.CrossCutting.Adapter.Interfaces;
 
-namespace Client.Infrastructure.CrossCutting.Adapter.Map
+namespace Client.Application.Map
 {
-    public class MapperUser : IMapperUser
+    public class UserMapper : IUserMapper
     {
         List<UserDTO> userDTOs = new List<UserDTO>();
 
@@ -22,7 +22,7 @@ namespace Client.Infrastructure.CrossCutting.Adapter.Map
                 CPF = userDTO.CPF,
                 RG = userDTO.RG,
                 IsActive = userDTO.IsActive,
-                Address = new Address()
+                Address = MapperAddressToEntity(userDTO.Address)
             };
 
             return user;
@@ -39,7 +39,7 @@ namespace Client.Infrastructure.CrossCutting.Adapter.Map
                     CPF = user.CPF,
                     RG = user.RG,
                     IsActive = user.IsActive,
-                    Address = new AddressDTO()
+                    Address = MapperAddressToDto(user.Address)
                 };
 
                 userDTOs.Add(userDTO);
@@ -58,10 +58,44 @@ namespace Client.Infrastructure.CrossCutting.Adapter.Map
                 CPF = user.CPF,
                 RG = user.RG,
                 IsActive = user.IsActive,
-                Address = new AddressDTO()
+                Address = MapperAddressToDto(user.Address)
             };
 
             return userDTO;
+        }
+
+        public Address MapperAddressToEntity(AddressDTO addressDTO)
+        {
+            Address address = new Address
+            {
+                Id = Guid.Parse(addressDTO.Id),
+                City = addressDTO.City,
+                Complement = addressDTO.Complement,
+                Number = addressDTO.Number,
+                Neighborhood = addressDTO.Neighborhood,
+                Street = addressDTO.Street,
+                StreetCode = addressDTO.StreetCode,
+                IsActive = addressDTO.IsActive
+            };
+
+            return address;
+        }
+
+        public AddressDTO MapperAddressToDto(Address address)
+        {
+            AddressDTO addressDTO = new AddressDTO
+            {
+                Id = address.Id.ToString(),
+                City = address.City,
+                Complement = address.Complement,
+                Number = address.Number,
+                Neighborhood = address.Neighborhood,
+                Street = address.Street,
+                StreetCode = address.StreetCode,
+                IsActive = address.IsActive
+            };
+
+            return addressDTO;
         }
     }
 }

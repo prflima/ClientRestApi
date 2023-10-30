@@ -4,12 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Autofac;
 using Client.Application.Interfaces;
+using Client.Application.Interfaces.Map;
+using Client.Application.Map;
 using Client.Application.Services;
 using Client.Domain.Core.Interfaces.Repositories;
 using Client.Domain.Core.Interfaces.Services;
 using Client.Domain.Services.Services;
-using Client.Infrastructure.CrossCutting.Adapter.Interfaces;
-using Client.Infrastructure.CrossCutting.Adapter.Map;
 using Client.Infrastructure.Repository.Repositories;
 
 namespace Client.Infrastructure.CrossCutting.IOC
@@ -34,8 +34,8 @@ namespace Client.Infrastructure.CrossCutting.IOC
             #endregion
 
             #region IOC Mapper
-            builder.RegisterType<MapperUser>().As<IMapperUser>();
-            builder.RegisterType<MapperAddress>().As<IMapperAddress>();
+            builder.RegisterType<UserMapper>().As<IUserMapper>();
+            builder.RegisterType<AddressMapper>().As<IAddressMapper>();
             #endregion
 
             #endregion
