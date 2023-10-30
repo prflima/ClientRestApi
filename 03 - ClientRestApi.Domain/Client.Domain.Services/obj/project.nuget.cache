@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "e5yAQNO7r3pYlFnqz0gaDLOnE/tHw8J6BAmFJ9SeVMdFL++7Cx8MD5Zw+X42Nh+Jcx3fdugu5DssyjoNItNJuA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\paulo\\OneDrive\\Desktop\\Git\\ClientRestApi\\03 - ClientRestApi.Domain\\Client.Domain.Services\\Client.Domain.Services.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\paulo\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\paulo\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
