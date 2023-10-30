@@ -13,7 +13,7 @@ namespace Client.Domain.Models
         /// <summary>
         /// The code street. (CEP for example)
         /// </summary>
-        public string StreetCode { get; set; }
+        public int StreetCode { get; set; }
 
         /// <summary>
         /// The numbers house
